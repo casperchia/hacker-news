@@ -1,5 +1,15 @@
-<ol>
-   <li *ngFor="let itemId of itemIds | slice:0:30">
+<ul>
+   <li *ngFor="let itemId of currentItems">
       <news-item [itemId]="itemId"></news-item>
    </li>
-</ol>
+</ul>
+
+<pagination [totalItems]="totalItemCount"
+            [(ngModel)]="currentPage"
+            [maxSize]="5"
+            [itemsPerPage]="pageSize"
+            [rotate]="false"
+            previousText="&lsaquo;"
+            nextText="&rsaquo;"
+            (pageChanged)="updateList($event)">
+</pagination>
