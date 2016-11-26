@@ -12,7 +12,7 @@ export class NewsListComponent implements OnInit {
   private totalItemCount: number = 0;
   private currentPage: number = 1;
   private currentItems: number[];
-  private pageSize: number = 30;
+  private pageSize: number = 15;
 
   constructor(private newsService: NewsService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
@@ -33,7 +33,6 @@ export class NewsListComponent implements OnInit {
   updateList(event) {
     this.currentPage = event.page;
     this.currentItems = this.itemIds.slice(this.startIndex(this.currentPage), this.endIndex(this.currentPage));
-    console.log(this.startIndex(this.currentPage), this.endIndex(this.currentPage));
     this.router.navigate(['/news', {page: this.currentPage}]);
   }
 

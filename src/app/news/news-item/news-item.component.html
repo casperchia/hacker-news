@@ -1,3 +1,9 @@
-<div>
-   <a href="{{item?.url}}">{{item?.title}}</a>
+<div *ngIf="item">
+   <div class="row">
+      {{item?.score}} - <a href="{{item?.url}}">{{item?.title}}</a>
+   </div>
+   <div class="row">
+      {{item?.by}}
+      <a routerLink="/news/{{item.id}}">{{item?.kids?.length}} comments</a>
+   </div>
 </div>
