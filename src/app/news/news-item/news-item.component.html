@@ -1,3 +1,6 @@
+<div *ngIf="!item" class="loading">
+   Loading...
+</div>
 <div *ngIf="item">
    <div class="row">
       {{item?.score}} - <a href="{{item?.url}}">{{item?.title}}</a>
