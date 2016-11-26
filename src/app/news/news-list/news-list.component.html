@@ -1,0 +1,5 @@
+<ol>
+   <li *ngFor="let itemId of itemIds | slice:0:30">
+      <news-item [itemId]="itemId"></news-item>
+   </li>
+</ol>
