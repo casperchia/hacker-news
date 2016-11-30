@@ -6,19 +6,22 @@ import {NewsDetailsComponent} from "./news-details/news-details.component";
 import {RouterModule} from "@angular/router";
 import {NewsService} from "./news.service";
 import {NewsItemComponent} from "./news-item/news-item.component";
-import {PaginationModule} from "ng2-bootstrap";
+import {PaginationModule, AccordionModule} from "ng2-bootstrap";
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     NewsComponent,
     NewsListComponent,
     NewsDetailsComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    CommentComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    PaginationModule
+    PaginationModule,
+    AccordionModule
   ],
   providers: [
     NewsService

@@ -1,0 +1,20 @@
+<accordion *ngIf="item && !item.deleted">
+   <accordion-group [heading]="item.by" [isOpen]="true">
+      <p [innerHtml]="item.text"></p>
+
+      <div *ngFor="let commentId of item.kids" class="indent">
+         <comment [itemId]="commentId"></comment>
+      </div>
+   </accordion-group>
+</accordion>
+
+
+<!--<div *ngIf="item" class="comment">-->
+<!--<div>{{item.by}}</div>-->
+<!--<p [innerHtml]="item.text"></p>-->
+
+<!--<div *ngFor="let commentId of item.kids" class="indent">-->
+<!--<comment [itemId]="commentId"></comment>-->
+<!--</div>-->
+<!--</div>-->
+<!--<pre>{{item | json}}</pre>-->
